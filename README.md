@@ -1,4 +1,4 @@
-GYMNOCHROMIES
+GYMNOCHROMIE
 ==========
 
 Gymnochromie est une application d'animation générative répondant visuellement au morceau d'Erik Satie Gymnopédie I Lent et douloureux. Chaque cercle est une note et il s'anime lorsque celle ci est jouée, en tentant de recréer la beauté minimaliste de la composition de Satie.
