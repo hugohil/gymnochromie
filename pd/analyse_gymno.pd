@@ -1,0 +1,65 @@
+#N canvas 520 146 841 621 10;
+#X declare -lib mrpeach;
+#X obj 10 -22 import mrpeach;
+#X text 489 33 -> udpsend ne fonctionne avec packOSC que si quelqu'un
+reçoit sur le port. Mettre un espace pour tests avec processing \,
+sinon laisser l'objet pour tests sur pd;
+#X obj 421 39 unpackOSC;
+#X obj 421 63 print OSC;
+#X obj 9 76 cnv 15 120 180 empty empty init 10 12 0 14 -260097 -257985
+0;
+#X obj 45 169 metro 15;
+#X obj 45 194 s m;
+#X obj 20 100 tgl 20 0 empty empty empty 25 10 0 8 -204786 -258113
+-262144 0 1;
+#X msg 51 120 \; pd dsp \$1 \;;
+#X obj 20 206 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 20 229 s init;
+#X obj 157 6 cnv 15 230 130 empty empty osc 20 12 0 14 -228856 -66577
+0;
+#X obj 174 86 udpsend;
+#X msg 222 69 disconnect;
+#X obj 174 109 tgl 15 0 empty empty connected 20 7 0 8 -261234 -260097
+-1 1 1;
+#X obj 222 22 loadbang;
+#X obj 174 31 r init;
+#X obj 174 56 r send;
+#X obj 141 221 cnv 15 230 140 empty empty Groupe_1 5 12 0 14 -261234
+-258113 0;
+#X obj 152 262 r m;
+#X obj 152 310 envoi;
+#X obj 220 233 r init;
+#X obj 152 334 s send;
+#X text 41 99 <- clique moi;
+#X obj 152 285 analyse grp1;
+#X msg 526 -3 port 5050;
+#X msg 452 -12 port 0;
+#X obj 421 14 udp receive 5050;
+#X msg 222 48 connect 127.0.0.1 5050;
+#X obj 20 20 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 20 47 delay 3000;
+#X obj 220 255 lecteur gymnopedie1.wav;
+#X connect 2 0 3 0;
+#X connect 5 0 6 0;
+#X connect 7 0 8 0;
+#X connect 7 0 9 0;
+#X connect 7 0 5 0;
+#X connect 9 0 10 0;
+#X connect 12 0 14 0;
+#X connect 13 0 12 0;
+#X connect 15 0 28 0;
+#X connect 16 0 28 0;
+#X connect 17 0 12 0;
+#X connect 19 0 24 0;
+#X connect 20 0 22 0;
+#X connect 21 0 31 0;
+#X connect 24 0 20 0;
+#X connect 25 0 27 0;
+#X connect 26 0 27 0;
+#X connect 27 0 2 0;
+#X connect 28 0 12 0;
+#X connect 29 0 30 0;
+#X connect 30 0 7 0;
+#X connect 31 0 24 1;

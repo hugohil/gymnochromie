@@ -1,0 +1,32 @@
+#N canvas 490 242 435 304 10;
+#X obj 147 119 dac~;
+#X obj 189 120 outlet~;
+#X obj 146 89 readsf~ 2 44100;
+#X obj 90 21 inlet;
+#X msg 146 63 open \$1;
+#X obj 146 38 symbol \$1;
+#X obj 26 231 cnv 15 380 40 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X obj 90 74 tgl 15 0 empty empty empty 17 7 0 10 -4032 -1 -1 0 1;
+#X text 37 235 NOTE : attention à bien connecter le inlet au toggle
+APRES l'avoir connecté au 'open';
+#X obj 265 176 s grav_reset;
+#X obj 265 106 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 288 134 packOSC;
+#X obj 288 156 s send;
+#X msg 288 105 /end /0/0/0/0;
+#X connect 2 0 1 0;
+#X connect 2 0 0 0;
+#X connect 2 1 1 0;
+#X connect 2 1 0 1;
+#X connect 2 2 10 0;
+#X connect 3 0 5 0;
+#X connect 3 0 7 0;
+#X connect 4 0 2 0;
+#X connect 5 0 4 0;
+#X connect 7 0 2 0;
+#X connect 10 0 9 0;
+#X connect 10 0 13 0;
+#X connect 11 0 12 0;
+#X connect 13 0 11 0;

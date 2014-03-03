@@ -1,0 +1,9 @@
+#N canvas 959 309 406 300 10;
+#X obj 38 127 packOSC;
+#X obj 38 62 inlet;
+#X text 77 61 DATAS;
+#X obj 38 161 outlet;
+#X msg 38 94 /\$1 /\$2/\$3/\$4/\$5;
+#X connect 0 0 3 0;
+#X connect 1 0 4 0;
+#X connect 4 0 0 0;
