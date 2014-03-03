@@ -2,7 +2,7 @@ GYMNOCHROMIE
 ==========
 
 Gymnochromie est une application d'animation générative répondant visuellement au morceau d'Erik Satie Gymnopédie I Lent et douloureux. Chaque cercle est une note et il s'anime lorsque celle ci est jouée, en tentant de recréer la beauté minimaliste de la composition de Satie.
-Ce programme a été réalisé avec Processing (génération visuelle) et PureData (pour l'analyse sonore en temps réel). C'est une expérience sur les rapports son et image.
+Ce programme a été réalisé avec Processing (génération visuelle) et PureData (pour l'analyse sonore en temps réel). C'est une expérience sur les rapports son et image, vous pouvez en visionner une <a href="https://vimeo.com/87109011">version vidéo</a>, bien que la qualité laisse à désirer.
 
 Penser à rajouter dans le dossier ./pd/ le fichier musical (nommez le gymnopedie1.wav). Il est dans le domaine public et disponible <a href="https://upload.wikimedia.org/wikipedia/commons/9/90/Erik_Satie_-_gymnopedies_-_la_1_ere._lent_et_douloureux.ogg?uselang=fr">ici</a>. Il faudra ensuite le convertir en .wav.
 
